@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     const container = document.querySelector(".container");
+    const form = document.getElementById("device-form");
 
     // Example device data
     const devices = [
@@ -50,6 +51,29 @@ document.addEventListener("DOMContentLoaded", function () {
             container.appendChild(card);
         });
     }
+
+    // Handle form submission
+    form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const newDevice = {
+            name: document.getElementById("name").value,
+            category: document.getElementById("category").value,
+            score: parseInt(document.getElementById("score").value),
+            specs: {
+                CPU: document.getElementById("cpu").value,
+                RAM: document.getElementById("ram").value,
+                Battery: document.getElementById("battery").value
+            },
+            image: document.getElementById("image").value
+        };
+
+        devices.push(newDevice);
+        renderDevices();
+
+        // Reset form fields
+        form.reset();
+    });
 
     renderDevices();
 });
