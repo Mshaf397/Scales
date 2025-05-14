@@ -8,46 +8,44 @@
 </head>
 <body>
     <h1>Device Database</h1>
-    <div class="container">
-        <div class="device-card">
-            <img src="placeholder.png" alt="Device Image">
-            <h2>Device Name</h2>
-            <p>Category: Phone</p>
-            <p>Score: <span class="score">85</span></p>
-            <p>Specs:</p>
-            <ul>
-                <li>CPU: XYZ</li>
-                <li>RAM: 8GB</li>
-                <li>Battery: 4000mAh</li>
-            </ul>
-        </div>
 
-        <div class="device-card">
-            <img src="placeholder.png" alt="Device Image">
-            <h2>Device Name</h2>
-            <p>Category: Smartwatch</p>
-            <p>Score: <span class="score">92</span></p>
-            <p>Specs:</p>
-            <ul>
-                <li>CPU: ABC</li>
-                <li>RAM: 2GB</li>
-                <li>Battery: 300mAh</li>
-            </ul>
-        </div>
+    <!-- Form for adding new device -->
+    <div class="form-container">
+        <h2>Add a New Device</h2>
+        <form id="device-form">
+            <label for="name">Device Name:</label>
+            <input type="text" id="name" required>
 
-        <div class="device-card">
-            <img src="placeholder.png" alt="Device Image">
-            <h2>Device Name</h2>
-            <p>Category: Tablet</p>
-            <p>Score: <span class="score">78</span></p>
-            <p>Specs:</p>
-            <ul>
-                <li>CPU: DEF</li>
-                <li>RAM: 6GB</li>
-                <li>Battery: 5000mAh</li>
-            </ul>
-            <script src="script.js"></script>
-        </div>
+            <label for="category">Category:</label>
+            <select id="category" required>
+                <option value="Phone">Phone</option>
+                <option value="Smartwatch">Smartwatch</option>
+                <option value="Tablet">Tablet</option>
+            </select>
+
+            <label for="score">Score:</label>
+            <input type="number" id="score" required>
+
+            <label for="cpu">CPU:</label>
+            <input type="text" id="cpu" required>
+
+            <label for="ram">RAM:</label>
+            <input type="text" id="ram" required>
+
+            <label for="battery">Battery:</label>
+            <input type="text" id="battery" required>
+
+            <label for="image">Image URL:</label>
+            <input type="text" id="image" required>
+
+            <button type="submit">Add Device</button>
+        </form>
     </div>
+
+    <div class="container">
+        <!-- Device cards will be dynamically added here -->
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
