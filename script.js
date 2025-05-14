@@ -11,9 +11,12 @@ document.addEventListener("DOMContentLoaded", function () {
             specs: {
                 CPU: "XYZ",
                 RAM: "8GB",
-                Battery: "4000mAh"
-            },
-            image: "placeholder.png"
+                Battery: "4000mAh",
+                Camera: "12MP",
+                Display: "6.5 inches, 1080p",
+                Storage: "128GB",
+                Charging: "30W"
+            }
         },
         {
             name: "Smartwatch Y",
@@ -22,9 +25,12 @@ document.addEventListener("DOMContentLoaded", function () {
             specs: {
                 CPU: "ABC",
                 RAM: "2GB",
-                Battery: "300mAh"
-            },
-            image: "placeholder.png"
+                Battery: "300mAh",
+                Camera: "None",
+                Display: "1.4 inches, 320x320",
+                Storage: "16GB",
+                Charging: "5W"
+            }
         }
     ];
 
@@ -36,7 +42,6 @@ document.addEventListener("DOMContentLoaded", function () {
             card.className = "device-card";
 
             card.innerHTML = `
-                <img src="${device.image}" alt="${device.name}">
                 <h2>${device.name}</h2>
                 <p>Category: ${device.category}</p>
                 <p>Score: <span class="score">${device.score}</span></p>
@@ -45,6 +50,10 @@ document.addEventListener("DOMContentLoaded", function () {
                     <li>CPU: ${device.specs.CPU}</li>
                     <li>RAM: ${device.specs.RAM}</li>
                     <li>Battery: ${device.specs.Battery}</li>
+                    <li>Camera: ${device.specs.Camera}</li>
+                    <li>Display: ${device.specs.Display}</li>
+                    <li>Storage: ${device.specs.Storage}</li>
+                    <li>Charging Speed: ${device.specs.Charging}</li>
                 </ul>
             `;
 
@@ -63,9 +72,12 @@ document.addEventListener("DOMContentLoaded", function () {
             specs: {
                 CPU: document.getElementById("cpu").value,
                 RAM: document.getElementById("ram").value,
-                Battery: document.getElementById("battery").value
-            },
-            image: document.getElementById("image").value
+                Battery: document.getElementById("battery").value,
+                Camera: document.getElementById("camera").value,
+                Display: document.getElementById("display").value,
+                Storage: document.getElementById("storage").value,
+                Charging: document.getElementById("charging").value
+            }
         };
 
         devices.push(newDevice);
