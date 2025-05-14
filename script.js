@@ -2,8 +2,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const container = document.querySelector(".container");
     const form = document.getElementById("device-form");
 
-    // Empty devices array for storing added devices
-    const devices = [];
+    // Load devices from localStorage or set to an empty array if not found
+    let devices = JSON.parse(localStorage.getItem("devices")) || [];
 
     function renderDevices() {
         container.innerHTML = ""; // Clear container before rendering
@@ -51,12 +51,19 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         };
 
+        // Add new device to the devices array
         devices.push(newDevice);
+
+        // Save devices to localStorage
+        localStorage.setItem("devices", JSON.stringify(devices));
+
+        // Re-render devices
         renderDevices();
 
         // Reset form fields
         form.reset();
     });
 
+    // Initial render of devices
     renderDevices();
 });
