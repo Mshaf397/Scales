@@ -2,37 +2,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const container = document.querySelector(".container");
     const form = document.getElementById("device-form");
 
-    // Example device data
-    const devices = [
-        {
-            name: "Phone Model X",
-            category: "Phone",
-            score: 85,
-            specs: {
-                CPU: "XYZ",
-                RAM: "8GB",
-                Battery: "4000mAh",
-                Camera: "12MP",
-                Display: "6.5 inches, 1080p",
-                Storage: "128GB",
-                Charging: "30W"
-            }
-        },
-        {
-            name: "Smartwatch Y",
-            category: "Smartwatch",
-            score: 92,
-            specs: {
-                CPU: "ABC",
-                RAM: "2GB",
-                Battery: "300mAh",
-                Camera: "None",
-                Display: "1.4 inches, 320x320",
-                Storage: "16GB",
-                Charging: "5W"
-            }
-        }
-    ];
+    // Empty devices array for storing added devices
+    const devices = [];
 
     function renderDevices() {
         container.innerHTML = ""; // Clear container before rendering
