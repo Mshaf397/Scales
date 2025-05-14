@@ -1,0 +1,52 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #FFFFFF;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.device-card {
+    background-color: #1E1E1E;
+    border-radius: 10px;
+    padding: 15px;
+    width: 250px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.device-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.device-card h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.device-card .score {
+    font-weight: bold;
+    color: #FFD700;
+}
+
+.device-card ul {
+    padding-left: 20px;
+}
+
+.device-card li {
+    margin-bottom: 5px;
+}
